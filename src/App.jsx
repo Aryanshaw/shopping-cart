@@ -1,17 +1,15 @@
 import Cart from "./pages/Cart";
-import React,{useState} from 'react';
+import React from 'react';
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import ProductList from "./pages/ProductList";
 import Error from "./pages/Error";
 import Register from "./pages/Register";
 import SingleProduct from "./pages/SingleProduct";
-import {BrowserRouter as Router , Route , Routes , Redirect} from "react-router-dom";
+import {  Route , Routes } from "react-router-dom";
 
 
 const App =() => {
-  
-  
 
 
   return (
