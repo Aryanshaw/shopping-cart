@@ -1,25 +1,26 @@
-import { FavoriteBorderOutlined, SearchOutlined, ShoppingCartOutlined } from '@material-ui/icons'
-import React from 'react'
-import styled from 'styled-components'
-import {Link} from 'react-router-dom';
-
+import {
+  FavoriteBorderOutlined,
+  SearchOutlined,
+  ShoppingCartOutlined,
+} from "@material-ui/icons";
+import React from "react";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const Info = styled.div`
   opacity: 0;
   width: 100%;
-   height: 100%;
-   position: absolute;
-   display:flex;
-   top: 0;
-   left:0;
-   z-index:3;
-   background-color: rgba(0,0,0,0.2);
-   align-items:center;
-   justify-content: center;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.2);
+  align-items: center;
+  justify-content: center;
   transition: all 0.5s ease;
-
-`
-
+`;
 
 const Container = styled.div`
   flex: 1;
@@ -31,34 +32,32 @@ const Container = styled.div`
   justify-content: center;
   background-color: #f1f8f8;
   position: relative;
-  
 
-  &:hover ${Info}{
-      opacity:1;
+  &:hover ${Info} {
+    opacity: 1;
   }
-`
+`;
 const Circle = styled.div`
-   width: 200px;
-   height: 200px;
-   border-radius: 50%;
-   /* background-color: white; */
-   position: absolute;
-`
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  /* background-color: white; */
+  position: absolute;
+`;
 const Image = styled.img`
   height: 75%;
   z-index: 2;
-  filter: drop-shadow(0rem 0.4rem 0.5rem );
-
-`
+  filter: drop-shadow(0rem 0.4rem 0.5rem);
+`;
 
 const Icon = styled.div`
- /* display:flex; */
-   /* position: absolute; */
+  /* display:flex; */
+  /* position: absolute; */
 
-   width: 40px;
-   height: 40px;
-   border-radius: 50%;
-   background-color:white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,47 +65,41 @@ const Icon = styled.div`
   transition: all 0.5s ease;
   cursor: pointer;
 
-
-  &:hover{
-      background-color: #e3e3fd;
-      transform: scale(1.2);
+  &:hover {
+    background-color: #e3e3fd;
+    transform: scale(1.2);
   }
+`;
 
-`     
-
-const Product = ({item}) => {
-
+const Product = ({ item }) => {
   const None = {
-    textDecoration: 'none',
+    textDecoration: "none",
     color: "black",
-  }
-
-  
+  };
 
   return (
     <Container>
-    <Circle/>
-    <Image src={item.img}/>
-     <Info>
-       <Link to="./cart" style={None}>
-         <Icon>
-             <ShoppingCartOutlined/>
-         </Icon>
-         </Link>
-         <Link to="/singleproduct" style={None}>
-         <Icon>
-             <SearchOutlined/>
-         </Icon>
-         </Link>
-         <Link to="/error" style={None}>
-         <Icon>
-             <FavoriteBorderOutlined/>
-         </Icon>
-         </Link>
-     </Info>
-
+      <Circle />
+      <Image src={item.img} />
+      <Info>
+        <Link to="/cart" style={None}>
+          <Icon>
+            <ShoppingCartOutlined />
+          </Icon>
+        </Link>
+        <Link to="/singleproduct" style={None}>
+          <Icon>
+            <SearchOutlined />
+          </Icon>
+        </Link>
+        <Link to="/error" style={None}>
+          <Icon>
+            <FavoriteBorderOutlined />
+          </Icon>
+        </Link>
+      </Info>
     </Container>
-  )
-}
+  );
+};
 
-export default Product
+export default Product;
