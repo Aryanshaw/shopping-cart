@@ -83,7 +83,7 @@ const Footer = () => {
   return (
     <Container>
       <Left>
-          <Logo>A-STORE</Logo>
+          <Logo>O-STORE</Logo>
           <Description>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non dolor placeat, suscipit omnis dolorem a corrupti tenetur, molestias iure error quisquam! Nihil magnam corporis dolor animi a, vero incidunt quae!</Description>
           <SocialContainer>
             
@@ -128,7 +128,7 @@ const Footer = () => {
                +91 827 486 2311
            </ContactItem>
            <ContactItem> <MailOutline style={{marginRight:"10px"}} />
-               contactaryan@gmail.com
+               contactOishik@gmail.com
            </ContactItem>
        </Right>
     </Container>

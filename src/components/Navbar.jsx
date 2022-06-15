@@ -95,7 +95,7 @@ const Navbar = () => {
         </Left>
         <Link to="/shopping-cart" style={None}>
           <Center>
-            <Logo>A-STORE</Logo>
+            <Logo>O-STORE</Logo>
           </Center>
         </Link>
         <Right>
